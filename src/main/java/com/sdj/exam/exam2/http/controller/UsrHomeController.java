@@ -31,6 +31,6 @@ public class UsrHomeController extends Controller {
 
 	private void actionDoSendMail(Rq rq) {
 		App app = Container.app;
-		Ut.sendMail(app.getSmtpGmailId(), app.getSmtpGmailPw(), "no-reply@lemon-cm.com", "레몬 커뮤니티 알림", "jangka512@gmail.com", "제목ㅋㅋㅋ", "내용 ㅋㅋㅋ");
+		Ut.sendMail(app.getSmtpGmailId(), "ibtxxphwpnmqiylv", "no-reply@lemon-cm.com", "레몬 커뮤니티 알림", "shin528d@gmail.com", "제목ㅋㅋㅋ", "내용 ㅋㅋㅋ");
 	}
 }
