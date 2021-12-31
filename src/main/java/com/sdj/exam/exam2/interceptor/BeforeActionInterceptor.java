@@ -10,6 +10,7 @@ public class BeforeActionInterceptor extends Interceptor {
 
 	private MemberService memberService;
 	
+
 	public void init() {
 		memberService = Container.memberService;
 	}
