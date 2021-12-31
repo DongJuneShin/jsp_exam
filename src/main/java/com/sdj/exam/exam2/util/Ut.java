@@ -54,11 +54,12 @@ public class Ut {
 
 		return false;
 	}
-
+	
 	public static String f(String format, Object... args) {
 		return String.format(format, args);
 	}
 
+	//맵을 쉽게 만들어주는 함수
 	public static Map<String, Object> mapOf(Object... args) {
 		if (args.length % 2 != 0) {
 			throw new IllegalArgumentException("인자를 짝수개 입력해주세요.");
@@ -89,6 +90,7 @@ public class Ut {
 		return map;
 	}
 
+	//객체를 json 문장화 한다.
 	public static String toJson(Object obj, String defaultValue) {
 		ObjectMapper om = new ObjectMapper();
 
@@ -98,7 +100,8 @@ public class Ut {
 			return defaultValue;
 		}
 	}
-
+	
+	//객체를 json 문장화(이쁘게)
 	public static String toPrettyJson(Object obj, String defaultValue) {
 		ObjectMapper om = new ObjectMapper();
 		om.configure(JsonGenerator.Feature.QUOTE_FIELD_NAMES, false);
@@ -110,6 +113,7 @@ public class Ut {
 		}
 	}
 
+	//json문장으로부터 객체를 생성한다.
 	public static <T> T toObjFromJson(String jsonStr, TypeReference<T> typeReference) {
 		ObjectMapper om = new ObjectMapper();
 
@@ -120,6 +124,7 @@ public class Ut {
 		}
 	}
 
+	//
 	public static <T> T toObjFromJson(String jsonStr, Class<T> cls) {
 		ObjectMapper om = new ObjectMapper();
 
